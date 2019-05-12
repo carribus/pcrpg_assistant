@@ -9,8 +9,13 @@ body {
     color: white;
 }
 
+select {
+    font-size: 16px;
+    width: 100%;
+}
+
 #app {
-    width: 400px;
+    width: 100%;
 }
 
 .hp {
@@ -36,28 +41,29 @@ body {
     border: 1px solid gray;
     padding: 0px;
     width: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    /* justify-content: space-around; */
-    align-items: center;
 }
 
 .row {
     width: 100%;
     font-size: 18px;
-    flex-grow: 1;
-    display: flex;
-    flex-flow: row nowrap;
 }
 
 .cell {
-    display: inline-block;
-    color: white;
-    border: 1px solid white;
-    flex-grow: 1;
+    /* border: 1px solid white; */
+    padding: 5;
 }
 
-#btn_add_row {
-    width: 50px;
-    font-size: 20px;
+.cell_value {
+    font-weight: bold;
+    text-align: center;
+    width: 75px;
+}
+
+.border_left {
+    border-left: 2px solid white;
+}
+
+button {
+    /* height: 50px; */
+    padding: 10px;
 }

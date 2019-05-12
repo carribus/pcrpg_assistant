@@ -1,29 +1,33 @@
 <head>
     <title>PC RPG Assistant</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 
 <body>
     <div id="app">
         <header>
             <div id="hp_player" class="hp">15</div>
+            <button id="btn_hp_sub">-</button>
+            <button id="btn_hp_add">+</button>
+
             <div id="energy_player" class="energy">0</div>
         </header>
 
-        <div id="char_table">
-            <div class="row">
-                <div class="cell">1</div>
-                <div class="cell">2</div>
-                <div class="cell">3</div>
-            </div>
-            <div class="row">
-                <div class="cell">4</div>
-                <div class="cell">5</div>
-                <div class="cell">6</div>
-            </div>
-        </div>
-        <button id="btn_add_row">+</button>
+        <table id="char_table">
+            <thead>
+                <th>Character</th>
+                <th>Item: Armour</th>
+                <th>Item: Weapon</th>
+                <th>Item: Energy</th>
+                <th>HP</th>
+                <th>Energy</th>
+                <th>Attack</th>
+                <th>Defence</th>
+            </thead>
+        </table>
     </div>
+
 
     <!-- <script src="lib/pixi.min.js"></script> -->
     <script type="module" src="src/main.js"></script>
