@@ -9,10 +9,6 @@ export class Character {
             atk: CharacterSheet[id].atk,
             def: CharacterSheet[id].def
         }
-        // this.hp = CharacterSheet[id].hp;
-        // this.energy = CharacterSheet[id].energy;
-        // this.atk = CharacterSheet[id].atk;
-        // this.def = CharacterSheet[id].def;
         this.weapon = 0;
         this.armor = 0;
         this.energyItem = 0;
@@ -37,7 +33,7 @@ export class Character {
 
 export class Model {
     constructor() {
-        this.health = 15;
+        this.health = 20;
         this.energy = 0;
         this.characters = [];
     }

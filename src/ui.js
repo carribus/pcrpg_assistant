@@ -14,6 +14,9 @@ export default class UI {
         this.energyElem = document.getElementById("energy_player");
         this.model = new Model();
 
+        this.updateHealth();
+        this.updateEnergy();
+
         document.getElementById("btn_hp_add").addEventListener('click', (e) => {
             this.model.health++;
             this.updateHealth();
@@ -76,10 +79,12 @@ export default class UI {
             cell.children[0].addEventListener('change', (e) => {
                 let character = e.target.value;
                 let row = e.target.parentNode.parentNode;
+                console.log('createCharacterDropdown.onChange');
                 console.log(character);
+                console.log("prevValue:" + e.target.prevValue);
                 if (e.target.prevValue) {
                     console.log(`Removing character: ${e.target.prevValue}`);
-                    this.model.removeCharacter(e.target.prevValue);
+                    this.model.removeCharacter(e.target.prevValue.id);
                 }
                 character = this.model.createCharacter(index, character) || {hp:0, energy: 0, atk: 0, def: 0};
                 if (character.hp === 0) {
@@ -90,6 +95,7 @@ export default class UI {
                 updateCharacterRow(row, character);
 
                 this.updateEnergy();
+                e.target.prevValue = character;
             });
             return cell;
         };
